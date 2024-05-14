@@ -36,21 +36,9 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
-    [install.path]
-    type = "path"
-    default = "/example"
-
     [install.init_main_permission]
     type = "group"
     default = "visitors"
-
-    [install.admin]
-    type = "user"
-
-    [install.password]
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-    type = "password"
 
 [resources]
 
@@ -59,13 +47,13 @@ ram.runtime = "50M"
     [resources.sources.main]
     url = "https://github.com/nkanaev/yarr/releases/download/v2.4/yarr-v2.4-linux64.zip"
     sha256 = "998c071256592fe44f4a125615ede9a91b589cc5288a8ee2d65182a044e87ce5"
+    in_subdir = false
+
     # autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
     [resources.install_dir]
-
-    [resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
@@ -73,4 +61,4 @@ ram.runtime = "50M"
     [resources.ports]
 
     [resources.apt]
-    packages = ""
+    packages = "sqlite3"
