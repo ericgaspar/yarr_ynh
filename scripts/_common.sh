@@ -10,6 +10,20 @@ go_version=1.20
 # PERSONAL HELPERS
 #=================================================
 
+ynh_build_app() {
+	VERSION=2.4
+	GITHASH=$(shell git rev-parse --short=8 HEAD)
+
+	CGO_ENABLED=1
+
+	GO_LDFLAGS  = -s -w
+	GO_LDFLAGS := $(GO_LDFLAGS) -X 'main.Version=$(VERSION)' -X 'main.GitHash=$(GITHASH)'
+
+	build_default:
+		ynh_exec_warn_less ynh_exec_as $app  CGO_ENABLED=0 $ynh_go build -tags "sqlite_foreign_keys release" -ldflags="$(GO_LDFLAGS)" -o $install_dir/yarr $install_dir/src/main.go
+}
+
+
 #=================================================
 # EXPERIMENTAL HELPERS
 #=================================================
