@@ -10,15 +10,6 @@ go_version=1.20
 # PERSONAL HELPERS
 #=================================================
 
-ynh_build_app() {
-	VERSION=2.4
-	CGO_ENABLED=1
-
-	build_default:
-		ynh_exec_warn_less ynh_exec_as $app $ynh_go build -tags "sqlite_foreign_keys release" -o $install_dir/yarr $install_dir/src/main.go
-}
-
-
 #=================================================
 # EXPERIMENTAL HELPERS
 #=================================================
