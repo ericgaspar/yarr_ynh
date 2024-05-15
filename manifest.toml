@@ -43,8 +43,7 @@ ram.runtime = "50M"
     [resources.sources.main]
     url = "https://github.com/nkanaev/yarr/archive/refs/tags/v2.4.tar.gz"
     sha256 = "2d55a13348c8558aaa3126885bff9bf02f45ea1dc19b2aca86ba121dade7d16e"
-
-    # autoupdate.strategy = "latest_github_tag"
+    autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
