@@ -14,9 +14,6 @@ ynh_build_app() {
 	VERSION=2.4
 	CGO_ENABLED=1
 
-	GO_LDFLAGS  = -s -w
-	GO_LDFLAGS := $(GO_LDFLAGS) -X 'main.Version=$(VERSION)' -X 'main.GitHash=$(GITHASH)'
-
 	build_default:
 		ynh_exec_warn_less ynh_exec_as $app $ynh_go build -tags "sqlite_foreign_keys release" -o $install_dir/yarr $install_dir/src/main.go
 }
