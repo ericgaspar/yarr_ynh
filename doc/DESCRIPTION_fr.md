@@ -1,1 +1,1 @@
-Ceci est une fausse description des fonctionalités de l'app
+yarr (yet another rss reader) est un agrégateur de flux basé sur le Web qui peut être utilisé à la fois comme application de bureau et comme serveur personnel auto-hébergé.
