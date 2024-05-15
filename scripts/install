@@ -30,7 +30,7 @@ ynh_use_go
 
 
 pushd $install_dir/src/main.go
-	ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=0 $ynh_go build -tags "sqlite_foreign_keys release" -o $install_dir/yarr
+	ynh_exec_warn_less ynh_exec_as $app CGO_ENABLED=0 $ynh_go build -tags "sqlite_foreign_keys release" -ldflags='-s -w' -o $install_dir/yarr
 
 popd
 
