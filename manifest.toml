@@ -41,9 +41,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/nkanaev/yarr/releases/download/v2.4/yarr-v2.4-linux64.zip"
-    sha256 = "998c071256592fe44f4a125615ede9a91b589cc5288a8ee2d65182a044e87ce5"
-    in_subdir = false
+    url = "https://github.com/nkanaev/yarr/archive/refs/tags/v2.4.tar.gz"
+    sha256 = "2d55a13348c8558aaa3126885bff9bf02f45ea1dc19b2aca86ba121dade7d16e"
 
     # autoupdate.strategy = "latest_github_tag"
 
